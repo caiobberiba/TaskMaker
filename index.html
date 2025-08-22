@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaker - To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h1>TaskMaker <span aria-label="emoji" title="Tarefas">📝</span></h1>
+    <div class="task-counter" id="task-counter">Tarefa(s): 0/100</div>
+        <p class="app-desc">Organize suas tarefas de forma simples, rápida e visual. Seu dia mais produtivo começa aqui!</p>
+    </header>
+    <main>
+        <section class="task-controls">
+            <form id="task-form" autocomplete="off">
+                <div class="form-group">
+                    <label for="task-name" class="form-title">Nome da tarefa</label>
+                    <input type="text" id="task-name" maxlength="200" required placeholder="Digite o nome da tarefa" aria-label="Nome da tarefa">
+                </div>
+                <div class="form-group">
+                    <label for="task-desc" class="form-title">Descrição</label>
+                    <input type="text" id="task-desc" placeholder="Descreva a tarefa (opcional)" aria-label="Descrição da tarefa">
+                </div>
+                <div class="form-group">
+                    <label for="task-date" class="form-title">Data/hora de conclusão</label>
+                    <input type="datetime-local" id="task-date" aria-label="Data/hora de conclusão">
+                </div>
+                <button type="submit">Adicionar</button>
+            </form>
+            <div class="search-sort-row">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Pesquisar tarefas..." aria-label="Pesquisar tarefas">
+                    <span class="search-icon" aria-hidden="true">🔍</span>
+                </div>
+                <div class="sort-controls">
+                    <label for="sort-select" class="sort-title">Ordene por:</label>
+                    <select id="sort-select" aria-label="Ordenar tarefas">
+                        <option value="az">A–Z</option>
+                        <option value="za">Z–A</option>
+                        <option value="date-near">Data mais próxima</option>
+                        <option value="date-far">Data mais distante</option>
+                    </select>
+                    <button id="delete-all">Excluir todas</button>
+                </div>
+            </div>
+        </section>
+        <section class="kanban-view">
+            <div class="kanban-board">
+                <div class="kanban-column" id="all-tasks" data-type="all">
+                    <h2>Todas</h2>
+                    <ul class="task-list" id="list-all"></ul>
+                    <p class="empty-msg" id="msg-all">Ainda não há tarefas cadastradas</p>
+                </div>
+                <div class="kanban-column" id="pending-tasks" data-type="pending">
+                    <h2>Pendentes</h2>
+                    <ul class="task-list" id="list-pending"></ul>
+                    <p class="empty-msg" id="msg-pending">Ainda não há tarefas pendentes</p>
+                </div>
+                <div class="kanban-column" id="completed-tasks" data-type="completed">
+                    <h2>Concluídas</h2>
+                    <ul class="task-list" id="list-completed"></ul>
+                    <p class="empty-msg" id="msg-completed">Ainda não há tarefas concluídas</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
