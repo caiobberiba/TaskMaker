@@ -1,0 +1,16 @@
+{
+  "name": "taskmaker",
+  "version": "1.0.0",
+  "description": "Kanban To-Do List SPA para portfólio QA.",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx serve .",
+    "lint": "eslint app.js"
+  },
+  "author": "caiobberiba",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "serve": "^14.0.0"
+  }
+}

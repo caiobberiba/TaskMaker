@@ -3,24 +3,6 @@
 Organize suas tarefas de forma simples, rápida e visual.  
 Seu dia mais produtivo começa aqui!
 
-## 🚀 Funcionalidades
-
-- ✅ Adicionar nova tarefa
-- 🖊️ Editar descrição da tarefa
-- 📅 Adicionar/remover data e hora de conclusão
-- 🔎 Buscar tarefas (com lupa)
-- 📊 Ordenar tarefas por ordem alfabética ou por data
-- 🧹 Limpar todas as tarefas ou apenas as datas
-- ⚠️ Validação de tarefas duplicadas e campos vazios
-- 💬 Mensagens de feedback para listas vazias
-- 📱 Interface leve e responsiva (HTML + CSS + JS puros)
-
-## 📦 Tecnologias Utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-
 ## 💻 Instalação
 
 1. Clone o repositório:
@@ -45,3 +27,30 @@ c)  Adicionar testes de performance com k6 ou JMeter
 d)  Adicionar deploy com GitHub Pages
 
 Feito com 💙 por Caio Bêribá
+# TaskMaker - Kanban To-Do List SPA
+
+## Estrutura
+- `index.html`: Página principal da aplicação
+- `app.js`: Lógica JS da aplicação
+- `style.css`: Estilos visuais
+- `assets/`: Imagens e recursos
+- `package.json`: Configuração de dependências e scripts
+- `package-lock.json`: Controle de versões das dependências
+- `.gitignore`: Ignora arquivos e pastas desnecessários no git
+
+## Scripts
+- `npm start`: Inicia servidor local para testes
+- `npm run lint`: Executa análise de código JS
+
+## Requisitos
+- Node.js instalado
+
+## Como rodar
+1. Instale dependências: `npm install`
+2. Inicie servidor: `npm start`
+3. Acesse: http://localhost:3000
+
+## Organização
+- Código limpo, modular e responsivo
+- Dependências e arquivos desnecessários ignorados pelo git
+- Pronto para evoluir com testes, CI/CD e deploy
