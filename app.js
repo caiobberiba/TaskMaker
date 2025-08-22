@@ -82,8 +82,8 @@ function renderTasks() {
                 }
                 li.innerHTML = `
                     <span class="task-name">${task.name}</span>
-                    ${task.desc ? `<span class="task-desc">${task.desc}</span>` : ''}
-                    ${task.date ? `<span class="task-date" style="${dateColor}">Deadline: ${new Date(task.date).toLocaleString()}</span>` : ''}
+                    ${task.desc ? `<span class="task-desc" style="display:block;text-align:left;margin-left:0;">${task.desc}</span>` : ''}
+                    ${task.date ? `<span class="task-date" style="${dateColor};display:flex;align-items:center;min-width:140px;max-width:95%;background:#e3f2fd;border-radius:8px;padding:1.5rem 1.3rem;margin-top:0.7rem;text-align:left;box-sizing:border-box;line-height:1.35;">${new Date(task.date).toLocaleString()}</span>` : ''}
                 `;
                 li.setAttribute('tabindex', '0');
                 // botão concluir removido
@@ -104,7 +104,7 @@ function openViewModal(id) {
             <div style="margin-bottom:1.2rem;">
                 <div style="font-size:1.15rem;font-weight:600;color:#222;margin-bottom:0.5rem;">${task.name}</div>
                 ${task.desc ? `<div style="font-size:1rem;color:#444;margin-bottom:0.5rem;">${task.desc}</div>` : ''}
-                ${task.date ? `<div style="font-size:1rem;color:#1976d2;background:#e3f2fd;border-radius:6px;padding:0.2rem 0.5rem;display:inline-block;">Deadline: ${new Date(task.date).toLocaleString()}</div>` : ''}
+                ${task.date ? `<div style="font-size:1rem;color:#1976d2;background:#e3f2fd;border-radius:6px;padding:0.2rem 0.5rem;display:inline-block;">${new Date(task.date).toLocaleString()}</div>` : ''}
             </div>
             <div style="display:flex;justify-content:space-between;gap:0.7rem;">
                 <button class="btn-editar" style="background:#1976d2;color:#fff;flex:1;" title="Editar">Editar</button>
@@ -260,7 +260,7 @@ function openTaskDetailsModal(task) {
             <div style="margin-bottom:1.2rem;">
                 <div style="font-size:1.15rem;font-weight:600;color:#222;margin-bottom:0.5rem;">${task.name}</div>
                 ${task.desc ? `<div style="font-size:1rem;color:#444;margin-bottom:0.5rem;">${task.desc}</div>` : ''}
-                ${task.date ? `<div style="font-size:1rem;color:#1976d2;background:#e3f2fd;border-radius:6px;padding:0.2rem 0.5rem;display:inline-block;">Deadline: ${new Date(task.date).toLocaleString()}</div>` : ''}
+                ${task.date ? `<div style="font-size:1rem;color:#1976d2;background:#e3f2fd;border-radius:6px;padding:0.2rem 0.5rem;display:inline-block;">${new Date(task.date).toLocaleString()}</div>` : ''}
             </div>
             <div style="display:flex;justify-content:space-between;gap:0.7rem;">
                 <button class="btn-editar" style="background:#1976d2;color:#fff;flex:1;" title="Editar">Editar</button>
